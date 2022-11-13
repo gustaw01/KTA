@@ -75,5 +75,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_RoadCorner270
       objectReference: {fileID: 0}
+    - target: {fileID: 7173447760028889400, guid: e37bc68e4171ed14a80bf7125fb50ffb, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173447760028889400, guid: e37bc68e4171ed14a80bf7125fb50ffb, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173447760028889400, guid: e37bc68e4171ed14a80bf7125fb50ffb, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173447760028889400, guid: e37bc68e4171ed14a80bf7125fb50ffb, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294901760
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e37bc68e4171ed14a80bf7125fb50ffb, type: 3}

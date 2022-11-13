@@ -2,16 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using System;
 
 [ExecuteAlways]
 public class CoordinateLaberer : MonoBehaviour
 {
+    [SerializeField] Color deafultColor = Color.black;
+    [SerializeField] Color blockedColor = Color.white;
+
     TextMeshPro label;
     Vector2Int coordinates = new Vector2Int();
+    Waypoint waypoint;
 
     void Awake() {
         label = GetComponent<TextMeshPro>();
+        label.enabled = false;
+
+        waypoint = GetComponentInParent<Waypoint>();
         DisplayCoordinates();
     }
 
@@ -23,6 +30,28 @@ public class CoordinateLaberer : MonoBehaviour
             UpdateObjectName();
         }
 
+        ColorCoordinates();
+        ToggleLabels();
+    }
+
+    private void ToggleLabels()
+    {
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            label.enabled = !label.IsActive();
+        }
+    }
+
+    void ColorCoordinates()
+    {
+        if(waypoint.IsPlacable)
+        {
+            label.color = deafultColor;
+        }
+        else
+        {
+            label.color = blockedColor;
+        }
     }
 
     void DisplayCoordinates()
